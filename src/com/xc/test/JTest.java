@@ -1,19 +1,23 @@
-package com.telecom.test;
+package com.xc.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.xc.mapper.IUserMapper;
+
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"/com/telecom/config/spring/*.xml"})
+@ContextConfiguration({"/com/xc/config/spring/*.xml"})
 public class JTest {
 
-
+	@Autowired
+	private IUserMapper iUserMapper;
 	
 	@Test
 	public void testExportExcel(){
-		System.out.println("1");
+		System.out.println(iUserMapper.getUser("linz"));
 	}
 	
 }

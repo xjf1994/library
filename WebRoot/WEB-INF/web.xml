@@ -3,14 +3,14 @@
   <display-name>library</display-name>
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>/WEB-INF/classes/com/telecom/config/spring/applicationContext-*.xml</param-value>
+    <param-value>/WEB-INF/classes/com/xc/config/spring/applicationContext-*.xml</param-value>
   </context-param>
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
   <context-param>
     <param-name>log4jConfigLocation</param-name>
-    <param-value>/WEB-INF/classes/com/telecom/config/log4j/log4j.properties</param-value>
+    <param-value>/WEB-INF/classes/com/xc/config/log4j/log4j.properties</param-value>
   </context-param>
   <context-param>
     <param-name>log4jRefreshInterval</param-name>
@@ -30,7 +30,7 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:com/telecom/config/spring/springmvc.xml</param-value>
+      <param-value>classpath:com/xc/config/spring/springmvc.xml</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>

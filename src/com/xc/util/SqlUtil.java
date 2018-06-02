@@ -1,4 +1,4 @@
-package com.telecom.util;
+package com.xc.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -7,7 +7,7 @@ public class SqlUtil {
 
 	/**
 	 * 
-	 * @param date 格式�?yyyy-MM-dd"的字符串
+	 * @param date 格式�?yyyy-MM-dd"的字符串
 	 * @return
 	 * @throws ParseException
 	 */

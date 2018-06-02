@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace命名空间，作用就是对sql进行分类化管理 -->
+<mapper namespace="com.xc.mapper.IUserMapper">
+
+	<resultMap type="Combo" id="combo">
+		<id column="cid" property="cid"/>
+		<result column="combo_name" property="combo_name"/>
+		<result column="combo_desc" property="combo_desc"/>
+		<result column="combo_price" property="combo_price"/>
+		<result column="combo_content" property="combo_content"/>
+	</resultMap>
+	
+	<resultMap type="Info" id="info">
+		<id column="iid" property="iid"/>
+		<result column="uid" property="uid"/>
+		<result column="info_name" property="info_name"/>
+		<result column="info_sex" property="info_sex"/>
+		<result column="info_hobby" property="info_hobby"/>
+		<result column="info_age" property="info_age"/>
+		<result column="create_time" property="create_time"/>
+	</resultMap>
+	
+	<resultMap type="User" id="user">
+		<id column="uid" property="uid" />
+		<result column="username" property="username" />
+		<result column="pass" property="pass" />
+		<result column="libm" property="libm" />
+		<association property="combo" javaType="Combo" resultMap="combo" />
+		<association property="info" javaType="Info"
+			resultMap="info" />
+	</resultMap>
+
+	<select id="getUser" parameterType="String" resultMap="user">
+		select * from 
+			(select uid,username,pass,combo.cid,iuid,combo_name,combo_desc,combo_content,combo_price from 
+				(select * from `user` where username=#{value}) a 
+			LEFT JOIN combo on a.cid=combo.cid) b
+		LEFT JOIN info on b.iuid=info.uid
+	</select>
+</mapper>

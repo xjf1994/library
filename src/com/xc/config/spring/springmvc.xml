@@ -46,7 +46,7 @@
 	        <mvc:exclude-mapping path="/**/*.gif"/>
 	        <mvc:exclude-mapping path="/**/*.jpg"/>
 	        <mvc:exclude-mapping path="/**/*.jpeg"/>
-	    	<bean class="com.telecom.interceptor.AllInterceptor"/>  
+	    	<bean class="com.xc.interceptor.AllInterceptor"/>  
     	</mvc:interceptor>
 	</mvc:interceptors>   
 

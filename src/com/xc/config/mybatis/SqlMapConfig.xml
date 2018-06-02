@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	</settings>
 
 	<typeAliases>
-		<package name="com/telecom/entity" />
+		<package name="com/xc/entity" />
 	</typeAliases>
 
 

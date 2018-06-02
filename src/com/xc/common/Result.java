@@ -1,7 +1,7 @@
-package com.telecom.common;
+package com.xc.common;
 
 /**
- * 定义返回结果�?
+ * 定义返回结果�?
 
  */
 public class Result {
