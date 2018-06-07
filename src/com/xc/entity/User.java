@@ -1,5 +1,10 @@
 package com.xc.entity;
 
+/**
+ * 客户账号类
+ * @author telecom
+ *
+ */
 public class User {
 	
 	private int uid;

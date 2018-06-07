@@ -1,5 +1,10 @@
 package com.xc.entity;
 
+/**
+ * 套餐类
+ * @author telecom
+ *
+ */
 public class Combo {
 	
 	private int cid;

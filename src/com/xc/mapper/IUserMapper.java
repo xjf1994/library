@@ -4,5 +4,11 @@ import com.xc.entity.User;
 
 public interface IUserMapper {
 
-	public User getUser(String username);
+	User getUser(String username);
+	
+	int add(User user);
+	
+	int delete(String username);
+	
+	int update(User user);
 }

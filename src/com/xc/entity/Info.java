@@ -1,5 +1,8 @@
 package com.xc.entity;
 
+/**
+ * 客户信息类
+ */
 import java.sql.Timestamp;
 
 public class Info {
@@ -9,7 +12,7 @@ public class Info {
 	private String info_name;
 	private String info_sex;
 	private String info_hobby;
-	private int info_age;
+	private Integer info_age;
 	private Timestamp create_time;
 	public int getIid() {
 		return iid;
@@ -41,10 +44,10 @@ public class Info {
 	public void setInfo_hobby(String info_hobby) {
 		this.info_hobby = info_hobby;
 	}
-	public int getInfo_age() {
+	public Integer getInfo_age() {
 		return info_age;
 	}
-	public void setInfo_age(int info_age) {
+	public void setInfo_age(Integer info_age) {
 		this.info_age = info_age;
 	}
 	public Timestamp getCreate_time() {
